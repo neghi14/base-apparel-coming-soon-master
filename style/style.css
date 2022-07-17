@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.hero{
+    display: flex;
+    position: relative;
+}
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+.mobileimage{
+    display: none;
+}
+.hero-detail{
+    margin: 0 auto;
+    width: 400px;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.hero-text{
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.hero-text h1{
+    text-transform: uppercase;
+    font-size: 6rem;
+    letter-spacing: 10px;
+    font-weight: 600;
+    color:hsl(0, 36%, 70%);
+}
+.hero-text span{
+    color:hsl(0, 6%, 24%);
+}
+.hero-text p{
+    color:hsl(0, 36%, 70%);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 25px;
+    margin-top: auto;
+}
+.email{
+    position: relative;
+    width: 100%;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    border: 1px solid hsl(0, 36%, 70%);
+    border-radius: 40px;
+}
+#email{
+    width: 60%;
+    height: 40px;
+    margin-left: 20px;
+    border: 0;
+    outline: none;
+}
+::placeholder{
+    color: hsl(0, 36%, 70%);
+}
+button{
+    width: 80px;
+    height: 52px;
+    border-radius: 40px;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    top: -2px;
+    right: 0px;
+    background: linear-gradient(135deg, hsl(0,80%,86%) 0%, hsl(0,74%,74%) 100%);
+}
+button:hover{
+    box-shadow: 0, 0, 10px linear-gradient(135deg, hsl(0,80%,86%) 0%, hsl(0,74%,74%) 100%);
+}
+
+.danger {
+    position: absolute;
+    right: 100px;
+}
+.hidden{
+    display: none;
+}
+.error{
+    color: hsl(0, 93%, 68%) !important;
+    margin: 0;
+    font-size: 0.8rem !important;
+    margin-left: 20px;
+}
+.valid{
+    color: hsl(240, 95%, 64%) !important;
+}
+@media(max-width: 48rem){
+    .image img{
+        display: none;
+    }
+    .mobileimage{
+        display: block;
+        width: 100%;
+        margin-block: 20px;
+    }
+    .hero-text h1{
+        font-size: 4.5rem;
+    }
+}
