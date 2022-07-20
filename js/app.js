@@ -13,7 +13,7 @@ function validate(field, regex) {
         error.textContent = 'Please provide a valid email'
         errorIcon.classList.remove('hidden')
     }
-}
+};
 
 input.addEventListener('input', (e) => {
     validate(e.target, email);
